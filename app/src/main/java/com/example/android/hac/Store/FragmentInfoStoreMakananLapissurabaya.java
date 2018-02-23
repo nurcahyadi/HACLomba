@@ -1,14 +1,17 @@
 package com.example.android.hac.Store;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.android.hac.PaymentPaypal;
 import com.example.android.hac.R;
 
 
@@ -18,6 +21,7 @@ import com.example.android.hac.R;
 public class FragmentInfoStoreMakananLapissurabaya extends Fragment {
 
     private TextView mTextView;
+    Button mButtonbeli;
 
     public FragmentInfoStoreMakananLapissurabaya() {
         // Required empty public constructor
@@ -28,7 +32,7 @@ public class FragmentInfoStoreMakananLapissurabaya extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_info_batik_jakarta1, container, false);
+        return inflater.inflate(R.layout.fragment_info_store, container, false);
 
 
 
@@ -39,10 +43,24 @@ public class FragmentInfoStoreMakananLapissurabaya extends Fragment {
 
 
         mTextView = (TextView) view.findViewById(R.id.Text);
+        mButtonbeli = view.findViewById(R.id.btn_beli);
 
-        mTextView.setText("Di Indonesia, terkenal dua jenis asinan yakni asinan Bogor dan asinan Betawi. Asinan bogor umumnya menggunakan buah-buahan tropis dan jarang yang menggunakan sayur. Sementara asinan betawi lebih sering ditemukan berisikan sayur-sayuran seperti sawi, kembang kol, tauge, selada, kacang tanah goreng, dan tahu putih. Kuah dari asinan betawi berupa bumbu kacang yang segar karena dicampur dengan cuka dan cabai.\n" +
-                "\n" +
-                "Asinan betawi termasuk kuliner khas Betawi yang disukai oleh para pecinta kuliner Jakarta. Selain enak dan menyegarkan, asinan betawi juga tergolong makanan yang menyehatkan karena banyak mengandung sayur-sayuran. Sebagai pelengkap makan, asinan betawi biasanya ditambahkan dengan kerupuk mie kuning. Di Jakarta, banyak penjual asinan di pinggir jalan. Untuk harganya, asinan betawi biasa dibandrol dengan harga jual mulai dari Rp.10.000 hingga Rp20.000.");
+        mButtonbeli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(getContext(), PaymentPaypal.class);
+                startActivity(a);
+            }
+        });
+        mTextView.setText("Lapis surabaya atau biasa juga di sebut Spekkoek atau lapis legit, merupakan roti lapis yang " +
+                "biasanya terdiri dari 2 lapisan atau 3 lapisan dengan warna kuning, coklat, kuning. Untuk lapis " +
+                "legit sendiri adonan yang selain menggunakan tepung terigu dan telur juga menggunakan kayu manis, " +
+                "cengkeh, cardamon yang berarama cengkeh. Ini yang membuat banyak orang Eropa menyukainya. " +
+                "Dengan berkembangnya kulturasi budaya, Spekkoek ini dibuat sesuai dengan citarasa orang " +
+                "Indonesia." +
+                "" +
+                "" +
+                "Harga : $ 7,00");
     }
 
 

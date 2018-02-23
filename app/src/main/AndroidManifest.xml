@@ -16,6 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".SignupActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -23,14 +31,6 @@
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".SignupActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".PilihKota" />
 
@@ -352,14 +352,20 @@
         <activity
             android:name=".Store.TablayoutStore"
             android:label="@string/title_activity_tablayout_store"
-            android:theme="@style/AppTheme"></activity>
-
+            android:theme="@style/AppTheme" />
         <activity android:name=".Store.TablayoutInfoStoreBatikOndelOndel" />
         <activity android:name=".Store.TablayoutInfoStoreBatikJalakharupat" />
         <activity android:name=".Store.TablayoutInfoStoreBatikSawunggaling" />
         <activity android:name=".Store.TablayoutInfoStoreMakananBijiketapang" />
         <activity android:name=".Store.TablayoutInfoStoreMakananBandungmakuta" />
         <activity android:name=".Store.TablayoutInfoStoreMakananLapissurabaya" />
+        <activity android:name=".PaymentPaypal">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

@@ -16,10 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.android.hac.Event.ListviewEvent;
+import com.example.android.hac.Store.TablayoutStore;
 import com.example.android.hac.Surabaya.ListviewBajudaerahSurabaya;
 import com.example.android.hac.Surabaya.ListviewBatikSurabaya;
 import com.example.android.hac.Surabaya.ListviewMakananSurabaya;
 import com.example.android.hac.Surabaya.ListviewSejarahSurabaya;
+import com.example.android.hac.Surabaya.ListviewTarianSurabaya;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class NavigationDrawerSurabaya extends AppCompatActivity
@@ -106,9 +108,9 @@ public class NavigationDrawerSurabaya extends AppCompatActivity
                 startActivity(intent1);
                 break;
             case R.id.nav_store:
-//                Intent intent2 = new Intent(NavigationDrawerSurabaya.this, ListviewTarianSurabaya.class);
-//
-//                startActivity(intent2);
+                Intent intent2 = new Intent(NavigationDrawerSurabaya.this, TablayoutStore.class);
+
+                startActivity(intent2);
                 break;
             case R.id.nav_budaya:
                 Intent intent3 = new Intent(NavigationDrawerSurabaya.this, ActivityListBudayaSurabaya.class);
